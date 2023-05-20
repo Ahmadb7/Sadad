@@ -1,6 +1,10 @@
 # Sadad
 Sadad Electronic Payment PC to POS API and samples.
 
+# Instruction
+ - Install after unziping files.
+ - Documents, samples, DLLs, and all things are in installation forlder "C:\Program Files (x86)\Sadad\..."
+
 Main project includes (development usage):
  - C# DLL
  - Document (protocol, errors, api, ...)
@@ -19,6 +23,3 @@ REST project (uses for end-users clients, not for developers) includes:
  - Document (errors, api, ...)
  - Simple web sample
 
-Install after unziping files.
-
-Documents, samples, DLLs, and all things are in installation forlder "C:\Program Files (x86)\Sadad\..."
