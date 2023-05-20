@@ -1,5 +1,23 @@
 # Sadad
-Sadad Electronic Payment PC to POS api and samples.
+Sadad Electronic Payment PC to POS API and samples.
+
+Main project includes (development usage):
+ - C# DLL
+ - Document (protocol, errors, api, ...)
+ - RESTful service (default ports are http://localhost:8050 or https://localhost:8051)
+ - Winforms sample
+ - Simple web sample
+
+ActiveX project (uses for VB6, Delphi, ...) includes:
+ - ActiveX DLLs
+ - Document (errors, api, ...)
+ - Delphi sample
+ - VB6 sample
+
+REST project (uses for end-users clients, not for developers) includes:
+ - RESTful service (default ports are http://localhost:8050 or https://localhost:8051)
+ - Document (errors, api, ...)
+ - Simple web sample
 
 Install after unziping files.
 
