@@ -1,4 +1,4 @@
-<p align="center">![Sadad PSP](logo.png)</p>
+<p align="center"> <img src="logo.png" /> </p>
 
 # Sadad
 Sadad Electronic Payment PC to POS API and samples.
