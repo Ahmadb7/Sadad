@@ -1,3 +1,5 @@
+![Sadad PSP](logo.png)
+
 # Sadad
 Sadad Electronic Payment PC to POS API and samples.
 
