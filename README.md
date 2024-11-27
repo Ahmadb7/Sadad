@@ -8,7 +8,7 @@ Sadad Electronic Payment PC to POS API and samples.
  - Documents, samples, DLLs, and all things are in installation forlder "C:\Program Files (x86)\Sadad\..."
 
 ## Projects
-Main project includes (development usage):
+Main project includes (.NetFramework development usage):
  - C# DLL
  - Document (protocol, errors, api, ...)
  - RESTful service (default ports are http://localhost:8050 or https://localhost:8051)
@@ -26,3 +26,6 @@ REST project (uses for end-users clients, not for developers) includes:
  - Document (errors, api, ...)
  - Simple web sample
 
+DotNet Standard package:
+ - uses for .NetFramework and .Net Core
+ - Version: dotnet standard 2.0
