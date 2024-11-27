@@ -29,3 +29,8 @@ REST project (uses for end-users clients, not for developers) includes:
 DotNet Standard package:
  - uses for .NetFramework and .Net Core
  - Version: dotnet standard 2.0
+
+SBS project:
+ This project is an application for small businesses. It has some functionalities like:
+  - Saving transactions in local repository.
+  - Creating, modifying, and using a business for each transaction.
