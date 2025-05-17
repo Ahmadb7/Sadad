@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PcPosConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PosDevice>
+    <Header>SADAD PCPOS</Header>
+    <MerchantName>بدون نام</MerchantName>
+    <IpAddress>0.0.0.0</IpAddress>
+    <Port>0</Port>
+    <TerminalId>00000000</TerminalId>
+    <MerchantId>000000000000000</MerchantId>
+  </PosDevice>
+  <ConnectionType>0</ConnectionType>
+  <ComPortName>NoName</ComPortName>
+  <DiscoveryPort>100</DiscoveryPort>
+  <DiscoveryTimeOut>2000</DiscoveryTimeOut>
+  <ConnectionTiemout>2000</ConnectionTiemout>
+  <ConnectionRetry>3</ConnectionRetry>
+  <ResponseTimeout>120000</ResponseTimeout>
+  <ResponseRetry>3</ResponseRetry>
+  <OrganizationName>سازمان تست</OrganizationName>
+  <PrintEnable>true</PrintEnable>
+  <PrintType>1</PrintType>
+  <NofPrint>1</NofPrint>
+  <PrintDirection>0</PrintDirection>
+  <PrintSpace>0</PrintSpace>
+  <TopMargin>0</TopMargin>
+  <LeftMargin>0</LeftMargin>
+  <FontSize>0</FontSize>
+  <FontType>0</FontType>
+  <DefaultRecieptPath>C:\Program Files (x86)\Common Files\Sadad\Small Business</DefaultRecieptPath>
+  <DefaultRecieptFile>ReportResult.mrt</DefaultRecieptFile>
+</PcPosConfiguration>
