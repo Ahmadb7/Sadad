@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="2">
+      <Transaction Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>Transaction</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category>Transaction</Category>
+        <Columns isList="true" count="22">
+          <value>Id,System.Int32</value>
+          <value>ResponseCode,System.String</value>
+          <value>Amount,System.Decimal</value>
+          <value>CardNo,System.String</value>
+          <value>ProcessingCode,System.String</value>
+          <value>TransNo,System.String</value>
+          <value>TransDate,System.String</value>
+          <value>RRN,System.String</value>
+          <value>ApprovalCode,System.String</value>
+          <value>TerminalNo,System.String</value>
+          <value>MerchantID,System.String</value>
+          <value>PcPosStatus,System.String</value>
+          <value>OrderId,System.String</value>
+          <value>SaleId,System.String</value>
+          <value>UserId,System.Int32</value>
+          <value>ServiceId,System.Int32</value>
+          <value>Opt1,System.String</value>
+          <value>Opt2,System.String</value>
+          <value>Opt3,System.String</value>
+          <value>Opt4,System.String</value>
+          <value>OrganizationName,System.String</value>
+          <value>ServiceName,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>13125264f6f04ff6b642d1e037bda437</Guid>
+        <Name>Transaction</Name>
+      </Transaction>
+      <TransactionDetails Ref="3" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>TransactionDetails</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category>TransactionDetails</Category>
+        <Columns isList="true" count="6">
+          <value>Iban,System.String</value>
+          <value>Amount,System.Decimal</value>
+          <value>TotalAmount,System.Decimal</value>
+          <value>Percent,System.Decimal</value>
+          <value>ServiceName,System.String</value>
+          <value>Count,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>0440957c5b0444c980723a07c93373e9</Guid>
+        <Name>TransactionDetails</Name>
+      </TransactionDetails>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="4">
+      <value>,UserName,UserName,System.String,,False,False</value>
+      <value>,AccountList,AccountList,System.String,,False,False</value>
+      <value>,Date,Date,System.String,,False,False</value>
+      <value>,Count,Count,System.Int32,_x0031_,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <DataBand2 Ref="5" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>13125264f6f04ff6b642d1e037bda437</BusinessObjectGuid>
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,0.2,7.87,3.2</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text14 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.72,0,2.1,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Koodak,8.25,Bold,Point,False,178</Font>
+              <Guid>8b0afee2e7dd4d9181af70d3f38c3e2b</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Transaction.OrganizationName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+            </Text14>
+            <Text19 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.43,0,1.3,0.3</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>B Koodak,6.75,Bold,Point,False,178</Font>
+              <Guid>724cbca90bd1487cbac171efbd7e1db0</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>شماره پایانه: {Transaction.TerminalNo}
+کاربر: {UserName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+            </Text19>
+            <PanelNecessaryData Ref="8" type="Panel" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.43,0.3,3.4,2.3</ClientRectangle>
+              <Components isList="true" count="3">
+                <PanelAmountRrn Ref="9" type="Panel" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,3.4,0.3</ClientRectangle>
+                  <Components isList="true" count="8">
+                    <Text1 Ref="10" type="Text" isKey="true">
+                      <Border>Left, Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>1.8,0,1.17,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>5a186ff5f67d4f44916677288c361aaf</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>{Transaction.Amount}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextFormat Ref="11" type="CurrencyFormat" isKey="true">
+                        <DecimalDigits>0</DecimalDigits>
+                        <GroupSeparator>,</GroupSeparator>
+                        <NegativePattern>14</NegativePattern>
+                        <PositivePattern>2</PositivePattern>
+                        <Symbol>ريال</Symbol>
+                        <UseLocalSetting>False</UseLocalSetting>
+                      </TextFormat>
+                    </Text1>
+                    <Text2 Ref="12" type="Text" isKey="true">
+                      <Border>Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>2.97,0,0.42,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>c6e6f4bd55c141a49d7c50215f3c6501</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text2</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text> مبلغ:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text2>
+                    <Text5 Ref="13" type="Text" isKey="true">
+                      <Border>Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0,1.3,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>c19b6adab48441f9a0becba5ee8b17f8</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text5</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>{Transaction.RRN}/{Transaction.TransNo}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                    </Text5>
+                    <Text6 Ref="14" type="Text" isKey="true">
+                      <Border>Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>1.3,0,0.5,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>1c1d12031ec049debeb0247388993ab3</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text6</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>پیگیری/مرجع:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text6>
+                    <Text3 Ref="15" type="Text" isKey="true">
+                      <Border>Left;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>1.8,0.15,1.1,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>ba34b82969ac4328acb6347dd5c56b22</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text3</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>{Transaction.CardNo}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>Expression</Type>
+                    </Text3>
+                    <Text4 Ref="16" type="Text" isKey="true">
+                      <Border>None;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>2.9,0.15,0.5,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>8d2c458dd5bc406492c5eb8d68487c61</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text4</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>شماره کارت:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text4>
+                    <Text9 Ref="17" type="Text" isKey="true">
+                      <Border>None;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0.15,1.26,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>fdf1081d133643ce98b50b72d9048f90</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text9</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>{Transaction.TransDate}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <Type>DataColumn</Type>
+                    </Text9>
+                    <Text10 Ref="18" type="Text" isKey="true">
+                      <Border>None;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>1.27,0.15,0.53,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>5bc7f5e51b7f48f7945876a0811ecd03</Guid>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text10</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="9" />
+                      <Text>تاریخ و زمان:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text10>
+                  </Components>
+                  <Conditions isList="true" count="0" />
+                  <DockStyle>Top</DockStyle>
+                  <Name>PanelAmountRrn</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="8" />
+                </PanelAmountRrn>
+                <PanelServiceName Ref="19" type="Panel" isKey="true">
+                  <Border>Top;Black;1;Dot;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0.3,3.4,0.45</ClientRectangle>
+                  <Components isList="true" count="6">
+                    <Text22 Ref="20" type="Text" isKey="true">
+                      <Border>Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>2.86,0,0.53,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Guid>e80fc650f39e46129da286231e469e59</Guid>
+                      <HorAlignment>Right</HorAlignment>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text22</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="19" />
+                      <Text> عنوان سرویس:</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text22>
+                    <Text21 Ref="21" type="Text" isKey="true">
+                      <Border>Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0,2.86,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold</Font>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text21</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="19" />
+                      <Text>{Transaction.ServiceName}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>DataColumn</Type>
+                    </Text21>
+                    <Text23 Ref="22" type="Text" isKey="true">
+                      <Border>Left, Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>1.7,0.15,1.7,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold,Point,False,178</Font>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text23</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="19" />
+                      <Text>پلاک ثبتی: {Transaction.Opt1}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text23>
+                    <Text25 Ref="23" type="Text" isKey="true">
+                      <Border>Right, Bottom;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0.15,1.7,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold,Point,False,178</Font>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text25</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="19" />
+                      <Text>نام و نام خانوادگی: {Transaction.Opt2}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text25>
+                    <Text27 Ref="24" type="Text" isKey="true">
+                      <Border>Left;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>1.7,0.3,1.7,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold,Point,False,178</Font>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text27</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="19" />
+                      <Text>نوع کار: {Transaction.Opt3}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text27>
+                    <Text29 Ref="25" type="Text" isKey="true">
+                      <Border>Right;Black;1;Dot;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,0.3,1.7,0.15</ClientRectangle>
+                      <Conditions isList="true" count="0" />
+                      <Font>B Koodak,7,Bold,Point,False,178</Font>
+                      <Margins>0,0,0,0</Margins>
+                      <Name>Text29</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="19" />
+                      <Text>توضیحات: {Transaction.Opt4}</Text>
+                      <TextBrush>Black</TextBrush>
+                      <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                      <Type>Expression</Type>
+                    </Text29>
+                  </Components>
+                  <Conditions isList="true" count="1">
+                    <value>_x007B_Trim_x0028_Transaction.ServiceName_x0029__x0020__x003D__x003D__x0020__x0022__x0022__x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+                  </Conditions>
+                  <DockStyle>Top</DockStyle>
+                  <Name>PanelServiceName</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="8" />
+                </PanelServiceName>
+                <PanelTransactionDetail Ref="26" type="Panel" isKey="true">
+                  <Brush>Transparent</Brush>
+                  <CanBreak>True</CanBreak>
+                  <CanGrow>True</CanGrow>
+                  <CanShrink>True</CanShrink>
+                  <ClientRectangle>0,0.75,3.4,1.8</ClientRectangle>
+                  <Components isList="true" count="3">
+                    <ColumnHeaderBand1 Ref="27" type="Stimulsoft.Report.Components.StiColumnHeaderBand" isKey="true">
+                      <Brush>DarkGray</Brush>
+                      <CanBreak>True</CanBreak>
+                      <ClientRectangle>0,0.2,3.4,0.3</ClientRectangle>
+                      <Components isList="true" count="2">
+                        <Panel4 Ref="28" type="Panel" isKey="true">
+                          <Brush>Transparent</Brush>
+                          <ClientRectangle>0,0.15,3.4,0.15</ClientRectangle>
+                          <Components isList="true" count="4">
+                            <Text15 Ref="29" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>0,0,1.2,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>1.2,0</MinSize>
+                              <Name>Text15</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="28" />
+                              <Text>مقدار/مبلغ</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>Expression</Type>
+                            </Text15>
+                            <Text11 Ref="30" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>1.2,0,0.5,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Guid>286fbc4ef9f149078acf6b90b7164863</Guid>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>0.5,0</MinSize>
+                              <Name>Text11</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="28" />
+                              <Text>درصد</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>Expression</Type>
+                            </Text11>
+                            <Text18 Ref="31" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>1.7,0,0.5,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Guid>fa120389dd3749d68208e48f312a9c60</Guid>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>0.5,0</MinSize>
+                              <Name>Text18</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="28" />
+                              <Text>تعداد</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>Expression</Type>
+                            </Text18>
+                            <Text13 Ref="32" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>2.2,0,1.2,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Fill</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Guid>f555e9b306854b9ebb715749f68e662b</Guid>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>1.2,0</MinSize>
+                              <Name>Text13</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="28" />
+                              <Text>مجموع</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>Expression</Type>
+                            </Text13>
+                          </Components>
+                          <Conditions isList="true" count="0" />
+                          <DockStyle>Bottom</DockStyle>
+                          <Name>Panel4</Name>
+                          <Page isRef="4" />
+                          <Parent isRef="27" />
+                        </Panel4>
+                        <Panel5 Ref="33" type="Panel" isKey="true">
+                          <Border>All;Black;1;Solid;False;4;Black</Border>
+                          <Brush>Transparent</Brush>
+                          <ClientRectangle>0,0,3.4,0.15</ClientRectangle>
+                          <Components isList="true" count="1">
+                            <Text12 Ref="34" type="Text" isKey="true">
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>0,0,1.8,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>1.8,0</MinSize>
+                              <Name>Text12</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="33" />
+                              <Text>شماره حساب</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>Expression</Type>
+                            </Text12>
+                          </Components>
+                          <Conditions isList="true" count="0" />
+                          <DockStyle>Top</DockStyle>
+                          <Name>Panel5</Name>
+                          <Page isRef="4" />
+                          <Parent isRef="27" />
+                        </Panel5>
+                      </Components>
+                      <Conditions isList="true" count="0" />
+                      <Name>ColumnHeaderBand1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="26" />
+                    </ColumnHeaderBand1>
+                    <DataBand1 Ref="35" type="DataBand" isKey="true">
+                      <Border>None;[0:0:0:0];1;Solid;False;4;Black</Border>
+                      <Brush>Transparent</Brush>
+                      <BusinessObjectGuid>0440957c5b0444c980723a07c93373e9</BusinessObjectGuid>
+                      <CanBreak>True</CanBreak>
+                      <ClientRectangle>0,0.9,3.4,0.3</ClientRectangle>
+                      <ColumnDirection>DownThenAcross</ColumnDirection>
+                      <Components isList="true" count="2">
+                        <Panel2 Ref="36" type="Panel" isKey="true">
+                          <Brush>Transparent</Brush>
+                          <ClientRectangle>0,0.15,3.4,0.15</ClientRectangle>
+                          <Components isList="true" count="4">
+                            <Text8 Ref="37" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>0,0,1.2,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Margins>1,0,0,0</Margins>
+                              <MinSize>1.2,0</MinSize>
+                              <Name>Text8</Name>
+                              <NullValue>Empty</NullValue>
+                              <Page isRef="4" />
+                              <Parent isRef="36" />
+                              <Text>{TransactionDetails.Amount}</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextFormat Ref="38" type="CurrencyFormat" isKey="true">
+                                <DecimalDigits>0</DecimalDigits>
+                                <GroupSeparator>,</GroupSeparator>
+                                <NegativePattern>14</NegativePattern>
+                                <PositivePattern>2</PositivePattern>
+                                <Symbol>ريال</Symbol>
+                                <UseLocalSetting>False</UseLocalSetting>
+                              </TextFormat>
+                              <Type>Expression</Type>
+                            </Text8>
+                            <Text16 Ref="39" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>1.2,0,0.5,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Guid>aab1621da30e45beb23fa8e7aa61a550</Guid>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>0.5,0</MinSize>
+                              <Name>Text16</Name>
+                              <NullValue>Empty</NullValue>
+                              <Page isRef="4" />
+                              <Parent isRef="36" />
+                              <Text>{TransactionDetails.Percent}</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextFormat Ref="40" type="PercentageFormat" isKey="true">
+                                <DecimalDigits>1</DecimalDigits>
+                                <GroupSeparator />
+                                <GroupSize>1</GroupSize>
+                                <NegativePattern>0</NegativePattern>
+                                <PositivePattern>0</PositivePattern>
+                                <Symbol>%</Symbol>
+                                <UseGroupSeparator>False</UseGroupSeparator>
+                                <UseLocalSetting>False</UseLocalSetting>
+                              </TextFormat>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>DataColumn</Type>
+                            </Text16>
+                            <Text20 Ref="41" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>1.7,0,0.5,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Guid>8cc46a27669c432ba309b56f0ca88156</Guid>
+                              <HorAlignment>Center</HorAlignment>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>0.5,0</MinSize>
+                              <Name>Text20</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="36" />
+                              <Text>{TransactionDetails.Count}</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=True, Trimming=None, WordWrap=False, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+                              <Type>Expression</Type>
+                            </Text20>
+                            <Text17 Ref="42" type="Text" isKey="true">
+                              <Border>All;Black;1;Solid;False;4;Black</Border>
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>2.2,0,1.2,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Fill</DockStyle>
+                              <Font>B Koodak,7,Bold</Font>
+                              <Guid>5ebb04aa205e4a53afae2dda9adcb560</Guid>
+                              <Margins>1,0,0,0</Margins>
+                              <MinSize>1.2,0</MinSize>
+                              <Name>Text17</Name>
+                              <Page isRef="4" />
+                              <Parent isRef="36" />
+                              <Text>{TransactionDetails.TotalAmount}</Text>
+                              <TextBrush>Black</TextBrush>
+                              <TextFormat Ref="43" type="CurrencyFormat" isKey="true">
+                                <DecimalDigits>0</DecimalDigits>
+                                <GroupSeparator>,</GroupSeparator>
+                                <NegativePattern>14</NegativePattern>
+                                <PositivePattern>2</PositivePattern>
+                                <Symbol>ريال</Symbol>
+                                <UseLocalSetting>False</UseLocalSetting>
+                              </TextFormat>
+                              <Type>Expression</Type>
+                            </Text17>
+                          </Components>
+                          <Conditions isList="true" count="0" />
+                          <DockStyle>Bottom</DockStyle>
+                          <Name>Panel2</Name>
+                          <Page isRef="4" />
+                          <Parent isRef="35" />
+                        </Panel2>
+                        <Panel3 Ref="44" type="Panel" isKey="true">
+                          <Border>All;Black;1;Solid;False;4;Black</Border>
+                          <Brush>Transparent</Brush>
+                          <ClientRectangle>0,0,3.4,0.15</ClientRectangle>
+                          <Components isList="true" count="1">
+                            <Text7 Ref="45" type="Text" isKey="true">
+                              <Brush>Transparent</Brush>
+                              <ClientRectangle>0,0,1.8,0.15</ClientRectangle>
+                              <Conditions isList="true" count="0" />
+                              <DockStyle>Left</DockStyle>
+                              <Font>B Koodak,6.75,Bold,Point,False,178</Font>
+                              <Margins>0,0,0,0</Margins>
+                              <MinSize>1.8,0</MinSize>
+                              <Name>Text7</Name>
+                              <NullValue>Empty</NullValue>
+                              <Page isRef="4" />
+                              <Parent isRef="44" />
+                              <Text>{TransactionDetails.Iban}</Text>
+                              <TextBrush>Black</TextBrush>
+                              <Type>Expression</Type>
+                            </Text7>
+                          </Components>
+                          <Conditions isList="true" count="0" />
+                          <DockStyle>Top</DockStyle>
+                          <Name>Panel3</Name>
+                          <Page isRef="4" />
+                          <Parent isRef="35" />
+                        </Panel3>
+                      </Components>
+                      <Conditions isList="true" count="0" />
+                      <DataSourceName isNull="true" />
+                      <EvenStyle>Style2</EvenStyle>
+                      <Filters isList="true" count="0" />
+                      <Interaction Ref="46" type="Stimulsoft.Report.Components.StiBandInteraction" isKey="true">
+                        <CollapsingEnabled>True</CollapsingEnabled>
+                      </Interaction>
+                      <Name>DataBand1</Name>
+                      <OddStyle>Style1</OddStyle>
+                      <Page isRef="4" />
+                      <Parent isRef="26" />
+                      <Sort isList="true" count="0" />
+                    </DataBand1>
+                    <ColumnFooterBand1 Ref="47" type="Stimulsoft.Report.Components.StiColumnFooterBand" isKey="true">
+                      <Brush>Transparent</Brush>
+                      <ClientRectangle>0,1.6,3.4,0.15</ClientRectangle>
+                      <Components isList="true" count="0" />
+                      <Conditions isList="true" count="0" />
+                      <Name>ColumnFooterBand1</Name>
+                      <Page isRef="4" />
+                      <Parent isRef="26" />
+                    </ColumnFooterBand1>
+                  </Components>
+                  <Conditions isList="true" count="0" />
+                  <DockStyle>Top</DockStyle>
+                  <Name>PanelTransactionDetail</Name>
+                  <Page isRef="4" />
+                  <Parent isRef="8" />
+                </PanelTransactionDetail>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Name>PanelNecessaryData</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+            </PanelNecessaryData>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>3f44f0ea674e4f6ea80cb2f38a2633bd</Guid>
+      <Margins>0.2,0.2,0.2,0.2</Margins>
+      <Name>Page1</Name>
+      <PageHeight>11.69</PageHeight>
+      <PageWidth>8.27</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="48" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="49" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>6/7/2025 4:24:25 PM</ReportChanged>
+  <ReportCreated>1/26/2016 6:34:08 PM</ReportCreated>
+  <ReportFile>C:\Program Files (x86)\Common Files\Sadad\Small Business\ReportResult-SabtCustom.mrt</ReportFile>
+  <ReportGuid>ab0e504a0fda4866bddcdd72286c7142</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Inches</ReportUnit>
+  <ReportVersion>2014.2.2004</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="2">
+    <Style1 Ref="50" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>Transparent</Brush>
+      <Conditions isList="true" count="0" />
+      <Description />
+      <Font>Arial,8</Font>
+      <Name>Style1</Name>
+      <TextBrush>Black</TextBrush>
+    </Style1>
+    <Style2 Ref="51" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Brush>Gainsboro</Brush>
+      <Conditions isList="true" count="0" />
+      <Description />
+      <Font>Arial,8</Font>
+      <Name>Style2</Name>
+      <TextBrush>Black</TextBrush>
+    </Style2>
+  </Styles>
+</StiSerializer>
