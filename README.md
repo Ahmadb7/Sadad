@@ -7,6 +7,10 @@ Sadad Electronic Payment PC to POS API and samples.
  - Install after unziping files.
  - Documents, samples, DLLs, and all things are in installation forlder "C:\Program Files (x86)\Sadad\..."
 
+## nuget packages:
+ - https://www.nuget.org/packages/Sadad.PcPos.NetCore
+ - https://www.nuget.org/packages/Sadad.PcPos.Core.Standard
+
 ## Projects
 Main project includes (.NetFramework development usage):
  - C# DLL
